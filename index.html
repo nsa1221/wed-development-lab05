@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Лаборатори 05 - Responsive EduHub</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="logo">
+        <i class="fa-solid fa-graduation-cap"></i> EduHub
+      </div>
+      
+      <!-- Гар утасны цэсний товч (Hamburger Toggle) -->
+      <button class="menu-toggle" id="menuToggle" aria-label="Цэс нээх">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <nav class="navbar" id="navbar">
+        <ul class="nav-links">
+          <li><a href="#" class="active"><i class="fa-solid fa-compass"></i> Нүүр</a></li>
+          <li><a href="#"><i class="fa-solid fa-laptop-code"></i> Хичээлүүд</a></li>
+          <li><a href="#"><i class="fa-solid fa-diagram-project"></i> Лаборатори</a></li>
+          <li><a href="#"><i class="fa-solid fa-circle-question"></i> Тусламж</a></li>
+        </ul>
+        <div class="header-actions">
+          <button class="btn-secondary">Нэвтрэх</button>
+          <button class="btn-primary">Бүртгүүлэх</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1>Мэдээллийн Технологийн Онлайн Сургалт</h1>
+      <p>Програмчлал, веб хөгжүүлэлт болон систем инженерчлэлийн чадвараа академик түвшинд ахиулаарай.</p>
+    </div>
+  </section>
+
+  <!-- Main Layout Container -->
+  <div class="page-container">
+    
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="section-header">
+        <h2>Идэвхтэй нээлттэй хичээлүүд</h2>
+        <span class="view-all">Бүгдийг үзэх <i class="fa-solid fa-arrow-right"></i></span>
+      </div>
+      
+      <!-- Course Cards Grid -->
+      <div class="card-grid">
+        
+        <!-- Card 1 -->
+        <article class="card">
+          <div class="card-header bg-gradient-1">
+            <span class="card-tag">Front-End</span>
+            <i class="fa-brands fa-html5 card-icon"></i>
+          </div>
+          <div class="card-body">
+            <h3>HTML5 & CSS3 Үндэс</h3>
+            <p>Семантик бүтэц үүсгэх, Flexbox болон CSS Grid ашиглан адаптив вэб сайт бүтээх анхан шатны курс.</p>
+            <div class="card-footer">
+              <span class="author"><i class="fa-solid fa-clock"></i> 12 цаг</span>
+              <button class="card-btn"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="card">
+          <div class="card-header bg-gradient-2">
+            <span class="card-tag">Programming</span>
+            <i class="fa-brands fa-python card-icon"></i>
+          </div>
+          <div class="card-body">
+            <h3>Python & Data Science</h3>
+            <p>NumPy, Pandas болон Matplotlib сангуудыг ашиглан өгөгдөлд дүн шинжилгээ хийж сурах практик хичээл.</p>
+            <div class="card-footer">
+              <span class="author"><i class="fa-solid fa-clock"></i> 18 цаг</span>
+              <button class="card-btn"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="card">
+          <div class="card-header bg-gradient-3">
+            <span class="card-tag">Hardware & IoT</span>
+            <i class="fa-solid fa-microchip card-icon"></i>
+          </div>
+          <div class="card-body">
+            <h3>ESP32 ба Микроконтроллер</h3>
+            <p>MQ-2 мэдрэгч, OLED дэлгэц болон Telegram бот холбон ухаалаг систем бүтээх лабораторийн ажил.</p>
+            <div class="card-footer">
+              <span class="author"><i class="fa-solid fa-clock"></i> 15 цаг</span>
+              <button class="card-btn"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="card">
+          <div class="card-header bg-gradient-4">
+            <span class="card-tag">Software Eng</span>
+            <i class="fa-brands fa-java card-icon"></i>
+          </div>
+          <div class="card-body">
+            <h3>Java & ООП Соёл</h3>
+            <p>Объект хандлагат програмчлалын зарчмууд, өгөгдлийн бүтэц болон алгоритмын суурь мэдлэг.</p>
+            <div class="card-footer">
+              <span class="author"><i class="fa-solid fa-clock"></i> 20 цаг</span>
+              <button class="card-btn"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </main>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-widget">
+        <h3><i class="fa-solid fa-bullhorn"></i> Сургалтын зар мэдээ</h3>
+        <ul class="widget-list">
+          <li>
+            <a href="#">
+              <span class="date">10 Сар 12</span>
+              <p>Лаборатори 05-ын хамгаалах хугацаа сунгагдлаа.</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="date">10 Сар 10</span>
+              <p>Mobile-First болон Responsive веб хөгжүүлэлтийн зарчим.</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="date">10 Сар 05</span>
+              <p>Оюутны эрдэм шинжилгээний хурал зарлагдлаа.</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="sidebar-widget promo-card">
+        <h3>Оюутны системд нэвтрэх</h3>
+        <p>Өөрийн лабораторийн болон явцын онооны мэдээллийг шалгана уу.</p>
+        <button class="btn-primary full-width">Системд нэвтрэх</button>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <p>&copy; 2026 Мэдээллийн Технологийн Сургууль. Бүх эрх хуулиар хамгаалагдсан.</p>
+      <div class="social-links">
+        <a href="#"><i class="fa-brands fa-github"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-solid fa-globe"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Гар утасны цэсийг нээх/хаах скрипт -->
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navbar = document.getElementById('navbar');
+
+    menuToggle.addEventListener('click', () => {
+      navbar.classList.toggle('nav-open');
+      const icon = menuToggle.querySelector('i');
+      if (navbar.classList.contains('nav-open')) {
+        icon.className = 'fa-solid fa-xmark';
+      } else {
+        icon.className = 'fa-solid fa-bars';
+      }
+    });
+  </script>
+</body>
+</html>

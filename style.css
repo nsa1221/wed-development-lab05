@@ -1,0 +1,422 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary: #00897b;
+  --primary-hover: #00796b;
+  --bg-dark: #0d1f22;
+  --card-bg: #ffffff;
+  --text-dark: #153238;
+  --text-muted: #5f7d83;
+  --bg-light: #f4f8f8;
+  --border-color: #e0e8e8;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* Хэвтээ скролл үүсэхээс сэргийлнэ */
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+/* ==========================================
+   1. MOBILE FIRST STYLES (Үндсэн гар утасны загвар)
+   ========================================== */
+
+/* Header & Navigation */
+.site-header {
+  background-color: var(--bg-dark);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+}
+
+.header-container {
+  padding: 14px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 700;
+  color: #4db6ac;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.menu-toggle {
+  background: transparent;
+  border: none;
+  color: #4db6ac;
+  font-size: 22px;
+  cursor: pointer;
+  padding: 4px;
+}
+
+/* Mobile Navbar Dropdown */
+.navbar {
+  display: none; /* Гар утас дээр анхнаасаа нуугдна */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #12282c;
+  padding: 20px 16px;
+  border-bottom: 1px solid #265d66;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.navbar.nav-open {
+  display: flex; /* Цэс нээгдэх үед харагдана */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.nav-links a {
+  color: #b2dfdb;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-links a.active, .nav-links a:hover {
+  color: #ffffff;
+}
+
+.header-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+/* Buttons */
+.btn-primary, .btn-secondary {
+  width: 100%;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  font-size: 14px;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: #fff;
+  border: none;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #b2dfdb;
+  border: 1px solid #265d66;
+}
+
+.full-width {
+  width: 100%;
+  margin-top: 12px;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, #0d1f22 0%, #153238 100%);
+  color: white;
+  padding: 32px 16px;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 22px;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.hero-content p {
+  color: #b2dfdb;
+  font-size: 13px;
+}
+
+/* Main Layout Container (Mobile: Single Column) */
+.page-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  padding: 20px 16px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.section-header h2 {
+  font-size: 18px;
+}
+
+.view-all {
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 12px;
+}
+
+/* Card Grid (Mobile: 1 Column) */
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.card {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+}
+
+.card-header {
+  height: 100px;
+  padding: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.bg-gradient-1 { background: linear-gradient(135deg, #00897b, #4db6ac); }
+.bg-gradient-2 { background: linear-gradient(135deg, #00796b, #004d40); }
+.bg-gradient-3 { background: linear-gradient(135deg, #26a69a, #80cbd2); }
+.bg-gradient-4 { background: linear-gradient(135deg, #153238, #265d66); }
+
+.card-tag {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(4px);
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.card-icon {
+  font-size: 32px;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.card-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-body h3 {
+  font-size: 16px;
+  margin-bottom: 6px;
+  color: var(--text-dark);
+}
+
+.card-body p {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  border-top: 1px solid var(--border-color);
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.card-btn {
+  background-color: var(--bg-light);
+  border: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  color: var(--primary);
+  cursor: pointer;
+}
+
+/* Sidebar Widgets */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sidebar-widget {
+  background-color: var(--card-bg);
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+}
+
+.sidebar-widget h3 {
+  font-size: 15px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.widget-list {
+  list-style: none;
+}
+
+.widget-list li {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed var(--border-color);
+}
+
+.widget-list .date {
+  font-size: 11px;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.widget-list p {
+  font-size: 12px;
+  color: var(--text-dark);
+}
+
+.promo-card {
+  background: linear-gradient(135deg, #153238, #0d1f22);
+  color: white;
+}
+
+.promo-card h3 { color: white; }
+.promo-card p { color: #b2dfdb; font-size: 12px; }
+
+/* Footer */
+.site-footer {
+  background-color: var(--bg-dark);
+  color: #b2dfdb;
+  padding: 20px 16px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 12px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.social-links a {
+  color: #b2dfdb;
+  font-size: 16px;
+}
+
+/* ==========================================
+   2. TABLET MEDIA QUERY (min-width: 640px)
+   ========================================== */
+@media (min-width: 640px) {
+  .hero-content h1 { font-size: 26px; }
+  .hero-content p { font-size: 14px; }
+
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr); /* Таблет дээр 2 багана */
+    gap: 20px;
+  }
+}
+
+/* ==========================================
+   3. DESKTOP MEDIA QUERY (min-width: 1024px)
+   ========================================== */
+@media (min-width: 1024px) {
+  .header-container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 16px 24px;
+  }
+
+  .menu-toggle {
+    display: none; /* Дэлгэц томрох үед Hamburger товч арилна */
+  }
+
+  .navbar {
+    display: flex; /* Navbar байнга нээлттэй харагдана */
+    position: static;
+    background: transparent;
+    padding: 0;
+    border: none;
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+    gap: 32px;
+  }
+
+  .nav-links {
+    flex-direction: row;
+    gap: 28px;
+  }
+
+  .header-actions {
+    flex-direction: row;
+    width: auto;
+  }
+
+  .btn-primary, .btn-secondary {
+    width: auto;
+  }
+
+  .page-container {
+    max-width: 1240px;
+    margin: 30px auto;
+    padding: 0 24px;
+    grid-template-columns: 1fr 320px; /* Дэлгэц томрох үед Sidebar баруун талд орно */
+    gap: 32px;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr); /* Дэлгэц томрох үед 3 багана */
+  }
+
+  .footer-container {
+    max-width: 1240px;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 13px;
+  }
+}
